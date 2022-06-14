@@ -1,0 +1,158 @@
+body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(226, 240, 254) 0%,
+    rgb(255, 247, 228) 90%
+  );
+}
+
+.frame {
+  border: 2px solid gray;
+  position: relative;
+  top: 60px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 15px black;
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.inputcity {
+  text-align: right;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+.maindisplay {
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+.week1 {
+  border: 2px solid gray;
+  border-radius: 10px;
+  text-align: center;
+  margin: 13px;
+}
+.week2 {
+  border: 2px solid gray;
+  border-radius: 10px;
+  text-align: center;
+  margin: 13px;
+}
+.week3 {
+  border: 2px solid gray;
+  border-radius: 10px;
+  text-align: center;
+  margin: 13px;
+}
+.week4 {
+  border: 2px solid gray;
+  border-radius: 10px;
+  text-align: center;
+  margin: 13px;
+}
+.week5 {
+  border: 2px solid gray;
+  border-radius: 10px;
+  text-align: center;
+  margin: 13px;
+}
+
+.emojiweek {
+  font-size: 19px;
+  color: gray;
+}
+h2 {
+  margin-bottom: -18px;
+}
+.currentmain {
+  font-size: 13px;
+}
+.statusmain {
+  font-size: 13px;
+  margin-top: -12px;
+}
+.detailsmain {
+  font-size: 13px;
+  padding-top: 15px;
+}
+.emojimain {
+  font-size: 50px;
+  padding-top: 8px;
+  color: gray;
+  margin-right: 25px;
+}
+.tempeturemain {
+  font-size: 50px;
+  font-weight: bolder;
+  padding-top: 3px;
+  margin-right: 20px;
+}
+.celmain {
+  font-size: 12px;
+  color: black;
+  margin-top: 15px;
+}
+.fahmain {
+  font-size: 12px;
+  margin-top: 15px;
+  color: black;
+}
+#sep {
+  margin-top: 14px;
+  font-size: 12px;
+  margin-right: -28px;
+
+  margin-left: -14px;
+}
+.celmain:hover {
+  cursor: pointer;
+  color: blue;
+  font-weight: bolder;
+}
+.fahmain:hover {
+  cursor: pointer;
+  color: blue;
+  font-weight: bolder;
+}
+h5 {
+  font-size: 17px;
+  padding-top: 10px;
+  line-height: 7px;
+}
+.weektempeture {
+  font-size: 13px;
+  line-height: 2px;
+}
+.entercity {
+  border-right: none;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.search {
+  background: none;
+  border-left: none;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+  border-right: 2px solid gray;
+  margin-left: -5px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.mylocation {
+  background: none;
+  border: 2px solid gray;
+  border-radius: 8px;
+}
+.mylocation:hover {
+  cursor: pointer;
+  background: whitesmoke;
+}
