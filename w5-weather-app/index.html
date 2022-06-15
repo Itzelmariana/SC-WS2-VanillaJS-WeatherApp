@@ -11,84 +11,85 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link href="src/styles.css" rel="stylesheet"/>
-   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>   
-   <script
-    src="https://kit.fontawesome.com/04da681cff.js"
-    crossorigin="anonymous"></script>
+    <link href="src/styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/04da681cff.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <div class="container">
       <div class="frame">
-          <div class="inputcity">
-            <div class="row test">
-                <div class="col-12" >
-                  <input 
-                  onenter="submit"        
-                  type="search" 
-                  placeholder="Enter a city" 
-                  id="city-input"
-                  autofocus 
-                  class="entercity"/>
-                <button type="submit" class="search" id="search">🔍 </button>  
-                <button class="mylocation" id="myloc"> 📍 </button>
-                </div>
+        <div class="inputcity">
+          <div class="row">
+            <div class="col-12">
+              <input
+                onenter="submit"
+                type="search"
+                placeholder="Enter a city"
+                id="city-input"
+                autofocus
+                class="entercity"
+              />
+              <button type="submit" class="search" id="search">🔍</button>
+              <button class="mylocation" id="myloc">📍</button>
             </div>
           </div>
-          <div class="maindisplay">
-              <div class="row">
-                <div class="col">
-                  <h2 class="displaycity">Texas</h2>
-                  <br />
-                  <p class="currentmain">
-                    Saturday 15:53
-                  </p>
-                  <p class="statusmain" id="description">Clear</p>
-                </div>
-                <div class="col-1 emojimain"> <i class="fa-solid fa-cloud-bolt"></i>
-                </div>
-                <div class="col-1 tempeturemain" id="maintemp">33
-                </div>
-                 <span class="col-1 celmain" id="c">°C</span>
-                 <span class="col-1" id="sep">|</span>
-                 <span class="col-1 fahmain" id="f">°F</span>
-                <div class="col">
-                  <p class="detailsmain">
-                    Wind:<span id="wind">0</span><br>
-                    Humidity:<span id="humidity">35</span>
-                  </p>
-                </div>              
-            </div>    
-          </div>
+        </div>
+        <div class="maindisplay">
           <div class="row">
-              <div class="col week1">          
-                <h5>Sun</h5>
-                <p class="emojiweek"> <i class="fa-solid fa-cloud-sun"></i></p>
-                <p class="weektempeture">37°C </p>
-              </div>
-              <div class="col week2">
-                  <h5>Mon</h5>
-                  <p class="emojiweek"> <i class="fa-solid fa-cloud-sun"></i></p>
-                  <p class="weektempeture">28°C </p>
-                </div>
-                <div class="col week3">           
-                       <h5>Tue</h5>
-                  <p class="emojiweek">  <i class="fa-solid fa-cloud-sun"></i></p>
-                  <p class="weektempeture">29°C </p>
-                </div>
-                <div class="col week4">
-                    <h5>Wed</h5>
-                    <p class="emojiweek">  <i class="fa-solid fa-cloud"></i></p>
-                    <p class="weektempeture">30°C </p>
-                </div>
-                <div class="col week5">
-                    <h5>Thu</h5>
-                    <p class="emojiweek"> <i class="fa-solid fa-sun"></i></p>
-                    <p class="weektempeture">33°C </p>
-                </div>
-        </div>  
-   </div>
-   <script src="src/index.js"></script>
+            <div class="col">
+              <h2 class="displaycity">Texas</h2>
+              <br />
+              <p class="currentmain">Saturday 15:53</p>
+              <p class="statusmain" id="description">Clear</p>
+            </div>
+            <div class="col-1 emojimain">
+              <i class="fa-solid fa-cloud-bolt"></i>
+            </div>
+            <div class="col-1 tempeturemain" id="maintemp">33</div>
+            <span class="col-1 celmain" id="c">°C</span>
+            <span class="col-1" id="sep">|</span>
+            <span class="col-1 fahmain" id="f">°F</span>
+            <div class="col">
+              <p class="detailsmain">
+                Wind:<span id="wind">0</span><br />
+                Humidity:<span id="humidity">35</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col week1">
+            <h5>Sun</h5>
+            <p class="emojiweek"><i class="fa-solid fa-cloud-sun"></i></p>
+            <p class="weektempeture">37°C</p>
+          </div>
+          <div class="col week2">
+            <h5>Mon</h5>
+            <p class="emojiweek"><i class="fa-solid fa-cloud-sun"></i></p>
+            <p class="weektempeture">28°C</p>
+          </div>
+          <div class="col week3">
+            <h5>Tue</h5>
+            <p class="emojiweek"><i class="fa-solid fa-cloud-sun"></i></p>
+            <p class="weektempeture">29°C</p>
+          </div>
+          <div class="col week4">
+            <h5>Wed</h5>
+            <p class="emojiweek"><i class="fa-solid fa-cloud"></i></p>
+            <p class="weektempeture">30°C</p>
+          </div>
+          <div class="col week5">
+            <h5>Thu</h5>
+            <p class="emojiweek"><i class="fa-solid fa-sun"></i></p>
+            <p class="weektempeture">33°C</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
