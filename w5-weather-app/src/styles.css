@@ -156,3 +156,7 @@ h5 {
   cursor: pointer;
   background: whitesmoke;
 }
+footer {
+  text-align: center;
+  font-size: 14px;
+}
