@@ -35,6 +35,16 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+
+  let iconElement = document.querySelector("#wicon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemperature = Math.round(response.data.main.temp);
+  fahrenheitTempeture = Math.round((celsiusTemperature * 9) / 5 + 32);
 }
 
 function searchCity(city) {
@@ -58,13 +68,9 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-function errorCallback(response) {
-  console.error(response);
-}
-
 function getCurrentLocation(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation, errorCallback);
+  navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
 let buttonmyloc = document.querySelector("#myloc");
@@ -82,16 +88,60 @@ inputtext.addEventListener("keyup", function (event) {
   }
 });
 
-searchCity("New York");
+// function to transform Celsius to Fahrenheit
 
-//Search a city change title and main tempeture
-// let h2 = document.querySelector("h2");
-
-// ////function for updating city in API url
-// function city() {
-//   let cityname = document.querySelector("h2").innerHTML;
-//   return cityname;
+// function displayFTempeture(event) {
+//   event.preventDefault();
+//   let ftemp = (14 * 9) / 5 + 32;
+//   let tempElement = document.querySelector("#maintemp");
+//   tempElement.innerHTML = Math.round(ftemp);
 // }
+// let flink = document.querySelector("#f");
+// flink.addEventListener("click", displayFTempeture);
+
+//
+
+let maintempc = document.querySelector("#maintemp");
+
+function cvalue(event) {
+  event.preventDefault;
+  maintempc.innerHTML = celsiusTemperature;
+}
+
+let cclick = document.querySelector("#c");
+cclick.addEventListener("click", cvalue);
+
+//Changing Fahrenheit value
+
+let maintempf = document.querySelector("#maintemp");
+
+function fvalue(event) {
+  event.preventDefault;
+  maintempf.innerHTML = fahrenheitTempeture;
+}
+let fclick = document.querySelector("#f");
+fclick.addEventListener("click", fvalue);
+
+// function displayf(response) {
+//   document.querySelector("#maintemp").innerHTML = Math.round(
+//     response.data.main.temp
+//   );
+// }
+
+// function fvalue(city) {
+//   let unitf = "imperial";
+//   let apiUrlf = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unitf}&appid=${apiKey}`;
+
+//   axios.get(apiUrlf).then(displayf);
+// }
+
+// function fvalue(event) {
+//   event.preventDefault();
+// }
+// let fclick = document.querySelector("#f");
+// fclick.addEventListener("click", fvalue);
+
+searchCity("New York");
 
 // ////function to search data in API and replace in main display current temp of searched city
 // function cvalue(response) {
@@ -99,47 +149,3 @@ searchCity("New York");
 //   maintemp.innerHTML = Math.round(response.data.main.temp);
 //   console.log(response.data);
 // }
-
-// ////function to update temp value
-// function updateTemp() {
-
-//   axios.get(apiUrlm).then(cvalue);
-// }
-
-//function to modified city value based on inserted input
-// function cityvalue(event) {
-//   event.preventDefault();
-//   let inputcity = document.querySelector("#city");
-//   h2.innerHTML = `${inputcity.value}`;
-// }
-
-//   /////recall function to update h2 (city) of input
-//   updateTemp();
-// }
-
-// // navigator.geolocation.getCurrentPosition(showPosition);
-
-// //
-
-// //   ;
-// //   // let maintemp = document.querySelector("#maintemp");
-// //   // maintemp.innerHTML = Math.round(response.data.main.temp);
-// // }
-
-// //making botton and search input
-// let inputclick = document.querySelector("#search");
-// inputclick.addEventListener("click", displayWeatherCondition());
-
-// updateTemp();
-
-//let unitf = "imperial";
-//let apiUrlf = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unitf}&appid=${apiKey}`;
-
-// let cclick = document.querySelector("#c");
-// cclick.addEventListener("click", cvalue);
-
-// function fvalue(response) {
-//   maintemp.innerHTML = Math.round(response.data.main.temp);
-// }
-// let fclick = document.querySelector("#f");
-///// fclick.addEventListener("click", fvalue);/
