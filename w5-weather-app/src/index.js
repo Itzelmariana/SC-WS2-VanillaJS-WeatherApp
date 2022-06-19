@@ -1,4 +1,4 @@
-//Add current time ("day of the day and up up date time")
+//Date displayed by day of the day + up to date time
 let currentmain = document.querySelector(".currentmain");
 
 let now = new Date();
@@ -21,9 +21,9 @@ if (hrs < 10) {
 if (min < 10) {
   min = `0${min}`;
 }
-
 currentmain.innerHTML = `${day} ${hrs}:${min}`;
 
+//function to get data response from API link
 function displayWeatherCondition(response) {
   document.querySelector("h2").innerHTML = response.data.name;
   document.querySelector("#maintemp").innerHTML = Math.round(
@@ -47,6 +47,7 @@ function displayWeatherCondition(response) {
   fahrenheitTempeture = Math.round((celsiusTemperature * 9) / 5 + 32);
 }
 
+//function to search city in API url
 function searchCity(city) {
   let apiKey = "2a980a820d1b255b9609b3f0f671cc24";
   let unitm = "metric";
@@ -55,13 +56,14 @@ function searchCity(city) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-////function to search city in browser
+//function to get city inserted in "Enter city" for API
 function handleSumit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
 
+//function to search in current location in API
 function searchLocation(position) {
   let apiKey = "2a980a820d1b255b9609b3f0f671cc24";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -73,6 +75,7 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+// Added action to buttons and search bar
 let buttonmyloc = document.querySelector("#myloc");
 buttonmyloc.addEventListener("click", getCurrentLocation);
 
@@ -88,26 +91,13 @@ inputtext.addEventListener("keyup", function (event) {
   }
 });
 
-// function to transform Celsius to Fahrenheit
-
-// function displayFTempeture(event) {
-//   event.preventDefault();
-//   let ftemp = (14 * 9) / 5 + 32;
-//   let tempElement = document.querySelector("#maintemp");
-//   tempElement.innerHTML = Math.round(ftemp);
-// }
-// let flink = document.querySelector("#f");
-// flink.addEventListener("click", displayFTempeture);
-
-//
-
+//Changing Celsius value
 let maintempc = document.querySelector("#maintemp");
 
 function cvalue(event) {
   event.preventDefault;
   maintempc.innerHTML = celsiusTemperature;
 }
-
 let cclick = document.querySelector("#c");
 cclick.addEventListener("click", cvalue);
 
@@ -122,30 +112,4 @@ function fvalue(event) {
 let fclick = document.querySelector("#f");
 fclick.addEventListener("click", fvalue);
 
-// function displayf(response) {
-//   document.querySelector("#maintemp").innerHTML = Math.round(
-//     response.data.main.temp
-//   );
-// }
-
-// function fvalue(city) {
-//   let unitf = "imperial";
-//   let apiUrlf = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unitf}&appid=${apiKey}`;
-
-//   axios.get(apiUrlf).then(displayf);
-// }
-
-// function fvalue(event) {
-//   event.preventDefault();
-// }
-// let fclick = document.querySelector("#f");
-// fclick.addEventListener("click", fvalue);
-
 searchCity("New York");
-
-// ////function to search data in API and replace in main display current temp of searched city
-// function cvalue(response) {
-//   let maintemp = document.querySelector("#maintemp");
-//   maintemp.innerHTML = Math.round(response.data.main.temp);
-//   console.log(response.data);
-// }
