@@ -70,28 +70,26 @@ body {
 h2 {
   margin-bottom: -18px;
 }
-.currentmain {
+ul {
+  padding: 0;
+  position: relative;
+  top: 20px;
   font-size: 13px;
+  list-style: none;
 }
-.statusmain {
-  font-size: 13px;
-  margin-top: -12px;
+ul li:first-letter {
+  text-transform: capitalize;
 }
+
 .detailsmain {
-  font-size: 13px;
-  padding-top: 15px;
+  margin-top: -5px;
 }
-.emojimain {
-  font-size: 50px;
-  padding-top: 8px;
-  color: gray;
-  margin-right: 25px;
-}
+
 .tempeturemain {
   font-size: 50px;
   font-weight: bolder;
-  padding-top: 3px;
-  margin-right: 20px;
+
+  margin-right: 27px;
 }
 .celmain {
   font-size: 12px;
