@@ -81,6 +81,10 @@ ul li:first-letter {
   text-transform: capitalize;
 }
 
+.emojimain {
+  margin-left: -15px;
+  margin-top: -10px;
+}
 .detailsmain {
   margin-top: -5px;
 }
