@@ -6,158 +6,114 @@ body {
   );
 }
 
+/* main square display style*/
 .frame {
-  border: 2px solid gray;
+  border: 1px solid gray;
   position: relative;
   top: 60px;
   padding-right: 30px;
   padding-left: 30px;
-  padding-top: 15px;
+  padding-top: 12px;
   padding-bottom: 15px;
   border-radius: 10px;
   max-width: 600px;
+  min-height: 410px;
   margin: 0 auto;
   box-shadow: 5px 5px 15px black;
   background: white;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Search bar style */
 .inputcity {
   text-align: right;
   padding-bottom: 25px;
   padding-top: 10px;
 }
-.maindisplay {
-  border: 2px solid gray;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 15px;
-}
-.week1 {
-  border: 2px solid gray;
-  border-radius: 10px;
-  text-align: center;
-  margin: 13px;
-}
-.week2 {
-  border: 2px solid gray;
-  border-radius: 10px;
-  text-align: center;
-  margin: 13px;
-}
-.week3 {
-  border: 2px solid gray;
-  border-radius: 10px;
-  text-align: center;
-  margin: 13px;
-}
-.week4 {
-  border: 2px solid gray;
-  border-radius: 10px;
-  text-align: center;
-  margin: 13px;
-}
-.week5 {
-  border: 2px solid gray;
-  border-radius: 10px;
-  text-align: center;
-  margin: 13px;
-}
-
-.emojiweek {
-  font-size: 19px;
-  color: gray;
-}
-h2 {
-  margin-bottom: -18px;
-}
-ul {
-  padding: 0;
-  position: relative;
-  top: 20px;
-  font-size: 13px;
-  list-style: none;
-}
-ul li:first-letter {
-  text-transform: capitalize;
-}
-
-.emojimain {
-  margin-left: -15px;
-  margin-top: -10px;
-}
-.detailsmain {
-  margin-top: -5px;
-}
-
-.tempeturemain {
-  font-size: 50px;
-  font-weight: bolder;
-
-  margin-right: 27px;
-}
-.celmain {
-  font-size: 12px;
-  color: black;
-  margin-top: 15px;
-}
-.fahmain {
-  font-size: 12px;
-  margin-top: 15px;
-  color: black;
-}
-#sep {
-  margin-top: 14px;
-  font-size: 12px;
-  margin-right: -28px;
-
-  margin-left: -14px;
-}
-.celmain:hover {
-  cursor: pointer;
-  color: blue;
-  font-weight: bolder;
-}
-.fahmain:hover {
-  cursor: pointer;
-  color: blue;
-  font-weight: bolder;
-}
-h5 {
-  font-size: 17px;
-  padding-top: 10px;
-  line-height: 7px;
-}
-.weektempeture {
-  font-size: 13px;
-  line-height: 2px;
-}
 .entercity {
   border-right: none;
-  border-bottom: 2px solid gray;
-  border-top: 2px solid gray;
-  border-left: 2px solid gray;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
 }
 .search {
   background: none;
   border-left: none;
-  border-bottom: 2px solid gray;
-  border-top: 2px solid gray;
-  border-right: 2px solid gray;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
   margin-left: -5px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 .mylocation {
   background: none;
-  border: 2px solid gray;
+  border: 1px solid gray;
   border-radius: 8px;
 }
 .mylocation:hover {
   cursor: pointer;
   background: whitesmoke;
 }
+
+/* main weather info display style */
+.maindisplay {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  min-height: 185px;
+}
+/* colum 1, city, date and description style */
+ul {
+  padding: 0;
+  font-size: 13px;
+  list-style: none;
+}
+ul li:first-letter {
+  text-transform: capitalize;
+}
+/* colum 2, icon style */
+.emojimain {
+  margin-top: -10px;
+}
+/* colum 3, tempeture style */
+.tempeturemain {
+  font-size: 50px;
+  font-weight: bolder;
+  margin-right: 27px;
+}
+/* colum 4, celcius text style */
+.celmain {
+  font-size: 12px;
+  color: black;
+  margin-top: 15px;
+}
+/* colum 5, celcius text style */
+.detailsmain {
+  margin-top: 12px;
+}
+
+/* forecast squeares style */
+#forecastdata {
+  border: 1px solid gray;
+  border-radius: 10px;
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 9px;
+}
+/* forecast text style */
+.weektempeture {
+  font-size: 12px;
+  padding-top: 2px;
+}
+.mintemp {
+  color: rgb(181, 179, 179);
+}
+
+/* footer text style */
 footer {
   text-align: center;
   font-size: 14px;
