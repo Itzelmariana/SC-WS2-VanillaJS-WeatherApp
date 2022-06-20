@@ -51,6 +51,12 @@ function displayWeatherCondition(response) {
   fahrenheitTempeture = Math.round((celsiusTemperature * 9) / 5 + 32);
 
   getForecast(response.data.coord);
+
+  let urlBase = "https://source.unsplash.com/random/?";
+  let weatherDescription = response.data.name;
+  let fullUrl = urlBase + weatherDescription.split(" ").join(",") + ",skyline";
+  document.querySelector("body").style.background = "url('" + fullUrl + "')";
+  document.querySelector("body").style["background-size"] = "cover";
 }
 
 //function to search city in API url

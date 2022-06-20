@@ -1,9 +1,6 @@
 body {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(226, 240, 254) 0%,
-    rgb(255, 247, 228) 90%
-  );
+  background: url("https://source.unsplash.com/random/?city,night");
+  background-size: cover;
 }
 
 /* main square display style*/
@@ -117,4 +114,11 @@ ul li:first-letter {
 footer {
   text-align: center;
   font-size: 14px;
+}
+a {
+  color: coral;
+  text-decoration: none;
+}
+a:hover {
+  color: lightslategrey;
 }
